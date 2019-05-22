@@ -14,7 +14,7 @@ trait Filtrable
      * @param Builder $query
      * @return Builder
      */
-    public function scopeSearch(Builder $query, $filter)
+    public function scopeFilter(Builder $query, $filter)
     {
         return $query->when($filter, function ($builder) use ($filter) {
             $builder->orderBy($filter);
